@@ -141,7 +141,7 @@ export const updateItem = async (req, res) => {
                 discount,
                 totalAmount,
                 category,
-                item,
+                subCategory,
             },
             { new: true }
         );
