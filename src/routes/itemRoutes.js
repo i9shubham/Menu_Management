@@ -11,7 +11,7 @@ import {
 const router = express.Router();
 
 router.get('/', getAllItems);
-router.get('/filters', getItemsByFilter); // search item by name or filters
+router.get('/filters', getItemsByFilter); // search item under categories or subcategories or with filters
 router.get('/:id', getItemById);
 router.put('/:id', updateItem);
 router.delete('/:id', deleteItem);
