@@ -1,0 +1,458 @@
+{
+	"info": {
+		"_postman_id": "5b0fc4f0-e4da-42f7-8542-b2cbaf1f2aea",
+		"name": "menu_management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27292327"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Add Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Electronics\",\r\n    \"image\": \"https://example.com/images/electronics.jpg\",\r\n    \"description\": \"Category for electronic items\",\r\n    \"taxApplicable\": true,\r\n    \"taxNumber\": \"TX123456\",\r\n    \"taxType\": \"Value Added Tax\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/categories",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/categories",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Category By Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Electronics\",\r\n    \"image\": \"https://example.com/images/electronics.jpg\",\r\n    \"description\": \"Category for electronic items\",\r\n    \"taxApplicable\": true,\r\n    \"taxNumber\": \"TX123456\",\r\n    \"taxType\": \"Sales Tax\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/categories/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66c31a25fd74bf14ef3c8263"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/categories/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66c31a25fd74bf14ef3c8263"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sub-Category",
+			"item": [
+				{
+					"name": "Add Sub-Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Smartphones\",\r\n    \"image\": \"https://example.com/images/smartphones.jpg\",\r\n    \"description\": \"Subcategory for smartphone items\",\r\n    \"taxApplicable\": true,\r\n    \"taxNumber\": \"TX789012\",\r\n    \"category\": \"66c31a25fd74bf14ef3c8263\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/subcategories",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"subcategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Sub-Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/subcategories",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"subcategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Sub Category by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/subcategories/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"subcategories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66c35aa14114fa55a4f2740e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Sub-Category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Android Smartphones\",\r\n    \"image\": \"https://example.com/images/smartphones.jpg\",\r\n    \"description\": \"Subcategory for smartphone items\",\r\n    \"taxApplicable\": true,\r\n    \"taxNumber\": \"TX789012\",\r\n    \"category\": \"60c72b2f9b1d8e1a4c8b4567\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/subcategories/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"subcategories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66c35aa14114fa55a4f2740e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Sub-Categories by Filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/subcategories/filters?name=Android Smartphones",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"subcategories",
+								"filters"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Android Smartphones"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Sub-Category by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/subcategories/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"subcategories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66c35aa14114fa55a4f2740e"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Item",
+			"item": [
+				{
+					"name": "Add Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"iPhone 13\",\r\n    \"description\": \"Latest model of iPhone with advanced features\",\r\n    \"baseAmount\": 999.99,\r\n    \"totalAmount\": 1000,\r\n    \"category\": \"66c31a25fd74bf14ef3c8263\",\r\n    \"subCategory\": \"66c35aa14114fa55a4f2740e\",\r\n    \"image\": \"https://example.com/images/iphone13.jpg\",\r\n    \"stock\": 50,\r\n    \"taxApplicable\": true,\r\n    \"taxNumber\": \"TX789012\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/items",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/items",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Item by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/items/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"items",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66c3677e85c8b399d861d5b8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"iPhone 15\",\r\n    \"description\": \"Latest model of iPhone with advanced features\",\r\n    \"baseAmount\": 999.99,\r\n    \"totalAmount\": 1000,\r\n    \"category\": \"66c31a25fd74bf14ef3c8263\",\r\n    \"subCategory\": \"66c35aa14114fa55a4f2740e\",\r\n    \"image\": \"https://example.com/images/iphone13.jpg\",\r\n    \"stock\": 50,\r\n    \"taxApplicable\": true,\r\n    \"taxNumber\": \"TX789012\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/items/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"items",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66c3677e85c8b399d861d5b8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Item by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/items/:id",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"items",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66c3677e85c8b399d861d5b8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Items with Filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/items/filters?name=iPhone 15",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"items",
+								"filters"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "iPhone 15"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "localhost:3001/api",
+			"type": "string"
+		}
+	]
+}
